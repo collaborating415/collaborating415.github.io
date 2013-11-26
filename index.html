@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
@@ -6,16 +8,29 @@
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/main.min.css" rel="stylesheet">
 </head>
 <body>
 
   <header class="masthead">
-    <div class="embed ratio-16x9">
-      <img class="embed__item" src="" alt="">
+    <div class="embed ratio-16x6 masthead__img">
+      <img class="embed__item" src="http://placehold.it/1600x600" alt="">
     </div>
-    <h1 class="blurb">Lorem ipsum dolor sit amet consequiter adim spacit.</h1>
+    <h1 class="blurb">Lorem ipsum dolor sit amet consequiter adim spaciton.</h1>
   </header>
+
+  <main class="grid">
+
+    {% for person in site.data.people %}
+      <div class="unit unit-s-1 unit-m-1-3 unit-l-1-5">
+        <div class="unit-spacer bio">
+          <h2 class="bio__name">{{person.name}}</h2>
+          <p class="bio__desc">{{person.bio}}</p>
+        </div>
+      </div>
+    {% endfor %}
+
+  </main>
 
 </body>
 </html>

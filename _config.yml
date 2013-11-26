@@ -1,0 +1,11 @@
+markdown: redcarpet
+baseurl: ""
+permalink: pretty
+exclude:
+  - 'CNAME'
+  - 'npmupdatedev'
+  - 'package.json'
+  - 'README.md'
+  - 'node_modules'
+  - '*.styl'
+  - '*.coffee'

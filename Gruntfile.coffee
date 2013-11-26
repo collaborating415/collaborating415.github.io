@@ -47,10 +47,10 @@ module.exports = (grunt) ->
             args: ['watch']
           }
           {
-            cmd: 'python'
+            cmd: 'jekyll'
             args: [
-              '-c'
-              'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();'
+              'serve'
+              '--watch'
             ]
           }
         ]
@@ -64,9 +64,11 @@ module.exports = (grunt) ->
         files: ['css/*.styl']
         tasks: ['stylus']
       css:
-        files: ['css/*.css']
+        files: ['_site/css/*.css']
+      js:
+        files: ['_site/js/*.js']
       html:
-        files: ['*.html']
+        files: ['_site/*.html']
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks)
 
