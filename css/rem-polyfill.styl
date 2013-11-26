@@ -1,0 +1,45 @@
+// REM to PX fallback for `font-size` and `font`
+_remReplace(expr, str, val)
+  expr = clone(expr)
+  for e, i in expr
+    if length(e) > 1
+      expr[i] = _remReplace(e, str, val)
+    else
+      if str == e
+        if unit(str) == unit(e)
+          expr[i] = val
+  expr
+
+_remToPx(rem)
+  round(remove-unit(rem) * 16) px
+
+_fontList(fonts)
+  fontList = ''
+
+  for item in fonts
+    unless typeof(item) is 'unit'
+      if match(' ', item)
+        fontList += ',"' + item + '"'
+      else
+        fontList += ',' + item
+
+  fontList
+
+font-size(val)
+  if unit(val) is 'rem'
+    add-property('font-size', _remToPx(val))
+
+  add-property('font-size', val)
+
+font(val, restVals...)
+  fontList = _fontList(restVals)
+
+  for item in val
+    if typeof(item) is 'unit'
+      if unit(item) is 'rem'
+        remItem = clone(item)
+        pxVal = _remToPx(remItem)
+        newVal = _remReplace(val, remItem, pxVal)
+        add-property('font', newVal unquote(fontList))
+
+  add-property('font', val unquote(fontList))

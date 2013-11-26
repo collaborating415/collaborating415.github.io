@@ -1,0 +1,80 @@
+/**
+ * Inspired by the Yahoo Grid Builder
+ * http://yui.github.io/gridbuilder/
+ */
+
+unit-width(size, cols)
+  return (size / cols) * 100
+
+unit()
+  display inline-block
+  *display inline
+  visibility visible
+
+unit-hidden()
+  display none
+  visibility hidden
+
+unit-1()
+  display block
+  visibility visible
+  width 100%
+
+unit-single(prefix, size, cols, previous-widths, unit-names, add-offset)
+  new = true
+  new-width = unit-width(size, cols)
+
+  for prev in previous-widths
+    if new-width == prev
+      new = false
+
+  if new == true
+    push(previous-widths, new-width)
+    push(unit-names, join('-', '.unit', prefix, size, cols))
+
+    .unit-{prefix}-{size}-{cols}
+      width (new-width)%
+
+    if add-offset == true
+      .unit-offset-{prefix}-{size}-{cols}
+        margin-left (new-width)%
+
+units(prefix, cols = 4, add-offsets = false)
+  previous-widths = 100
+  unit-names = ()
+
+  if cols < 3
+    cols = 3
+
+  .unit-{prefix}-hidden
+    unit-hidden()
+
+  .unit-{prefix}-1
+    unit-1()
+
+  for size in 2 .. cols
+    for sub-size in 1 .. size
+      unit-single(prefix, sub-size, size, previous-widths, unit-names, add-offsets)
+
+  {unquote(join(',', unit-names))}
+    unit()
+
+.grid
+  margin 0
+  padding 0
+  letter-spacing -0.31em
+  *letter-spacing normal
+  *word-spacing -0.43em
+  text-rendering optimizespeed
+
+.opera-only :-o-prefocus
+.grid
+  word-spacing -0.43em
+
+.unit
+  unit()
+  zoom 1
+  letter-spacing normal
+  text-rendering auto
+  vertical-align top
+  word-spacing normal
