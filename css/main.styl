@@ -1,5 +1,3 @@
-@import 'nib'
-@import 'normalize'
 @import 'rem-polyfill'
 @import 'grid-builder'
 @import 'embed-containers'
@@ -14,20 +12,33 @@ mw60 = "only screen and (min-width: 60em)"
 mw85 = "only screen and (min-width: 85em)"
 mw115 = "only screen and (min-width: 115em)"
 
-units("s", 5)
+// Typography settings
+base-font-size = 100%
+base-line-height = 1.4
+
+// Colours
+primary = #4890cd
+
+// Grid
+grid-units("xs", 6)
+
+@media only screen and (min-width: 25em)
+  grid-units("s", 6)
 
 @media only screen and (min-width: 38em)
-  units("m", 5, true)
+  grid-units("m", 6, true)
 
 @media only screen and (min-width: 60em)
-  units("l", 5, true)
+  grid-units("l", 6, true)
+
+// --------------------------------------------
 
 html
   height 100%
   margin 0
   position relative
 
-  font normal 100%/1.4 sans-serif
+  font normal base-font-size/base-line-height sans-serif
 
   @media mw38
     font-size 110%
@@ -54,34 +65,57 @@ body
   color #333
 
 ::-moz-selection
-  background odb-red
+  background primary
 
   color #fff
   text-shadow none
 
 ::selection
-  background odb-red
+  background primary
 
   color #fff
   text-shadow none
 
 h1
-  margin 1em 0 0.8em
+  font-size 1.5rem
+  margin 0 0 unit(base-line-height, rem)
 
   color #fff
-  font-size 1.5rem
-  line-height 1.3
 
 h2
-  margin 0 0 1em
+  font-size 1.125rem
+  margin 0 0 unit(base-line-height, rem)
 
   color #000
-  font-size 1.125rem
-  line-height 1.5
+
+h3
+  font-size 1rem
+  margin 0 0 unit(base-line-height, rem)
+
+  color #000
 
 p
-  margin 0 0 1.5em
+blockquote
+  margin 0 0 unit(base-line-height, em)
   padding 0
+
+ul
+  margin 0 0 unit(base-line-height, em)
+  padding 0
+
+  list-style-type none
+
+  > li
+    position relative
+
+  > li:before
+    content "•"
+    left -0.6em
+    position absolute
+    width 0.5em
+
+    color #999
+    text-align right
 
 a
 a:link
@@ -99,6 +133,12 @@ a:active
 a:focus
   outline 2px solid #000
 
+.mb-lh
+  margin-bottom unit(base-line-height, em)
+
+.mb-0
+  margin-bottom 0
+
 .grid
   text-align center
 
@@ -107,6 +147,10 @@ a:focus
 
 .unit-spacer
   padding 0 8px
+
+  @media mw38
+    padding-left 1em
+    padding-right 1em
 
 .flex-img
   display block
@@ -124,28 +168,126 @@ a:focus
   text-align center
   text-shadow 0 1px 3px rgba(0,0,0,0.5)
 
-  @media mw38
+  @media mw44
     bottom 0
-    left 50%
-    margin-left -10em
     position absolute
-    width 20em
+    width 100%
 
     background-color transparent
 
-.bio
-  margin-top 1.4em
+.blurb__text
+  display block
+  margin 0 auto
+  max-width 20em
 
-.bio__name
-  margin 0
+.lede
+  margin-left auto
+  margin-right auto
+  max-width 25em
+  padding 0 8px
 
   font-size 1.125rem
+  text-align center
+
+  @media mw38
+    padding-left 1em
+    padding-right 1em
+
+.quote
+  padding 1.7em 8px 2em
+
+  background-color #ccc
+
+  text-align center
+
+  @media mw38
+    padding-left 1em
+    padding-right 1em
+
+.quote__text
+  margin 0 auto
+  max-width 40em
+  position relative
+
+.quote__text:before
+.quote__text:after
+  content "“"
+  left -0.5em
+  height 0.5em
+  position absolute
+  top -0.1em
+  width 0.5em
+
+  font-size 5em
+  line-height 1
+  text-align right
+
+.quote__text:after
+  bottom -0.1em
+  content "”"
+  left auto
+  top auto
+  right -0.5em
+
+  text-align left
+
+.bio-wrap
+  background-color #e2e2e2
+
+.bio
+  margin 0 auto unit(base-line-height, em)
+  max-width 70em
+  position relative
+
+  @media mw38
+    padding-top 1em
+
+.bio__name
+  margin 9% 0 0
+  padding 0
+
+  font-size 1.125rem
+
+  @media mw25
+    margin-top 7%
+
+  @media mw25
+    margin-top 4%
+
+.bio__desc
+  padding-top unit(base-line-height, em)
+
+  @media mw60
+    padding-top 0
+
+.bio__positions
+  padding-top 0
+
+  @media mw38
+    padding-top unit(base-line-height, em)
+
+  @media mw60
+    padding-top 0
+
+.bio__heading
+  margin 0
+
+  font-size inherit
 
 .bio__title
   font-style italic
   font-weight normal
 
-.bio__desc
+.bio__header
+  position relative
+
+.bio__extra
+  max-height 100em
+  overflow hidden
+
+  transition max-height 250ms linear
+
+  font-size 0.875rem
 
   @media mw38
     font-size 0.875rem
@@ -153,20 +295,40 @@ a:focus
   @media mw60
     font-size 0.75rem
 
-.bio__btn
-  cursor pointer
-
-.bio__extra
-  max-height 100em
-  overflow hidden
-
-  transition max-height 350ms linear
-
 .js .bio__extra[data-state="collapsed"]
   max-height 0
 
+  @media mw38
+    max-height 100em
+
 .bio__btn
+  bottom 0
   display none
+  margin 0
+  overflow hidden
+  padding 0
+  position absolute
+  right 8px
+  top 0
+  width 46px
+
+  background #ccc embedurl("../img/i-nav.svg") no-repeat left center
+  border 0
+  cursor pointer
+
+  text-indent 100%
+  white-space nowrap
+
+.bio__btn[data-state="expanded"]
+  background-position right center
 
 .js .bio__btn
   display block
+
+  @media mw38
+    display none
+
+.social
+  text-align center
+
+@import 'icons'

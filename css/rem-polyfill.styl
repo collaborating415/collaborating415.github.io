@@ -26,8 +26,9 @@ _fontList(fonts)
   fontList
 
 font-size(val)
-  if unit(val) is 'rem'
-    add-property('font-size', _remToPx(val))
+  unless val is 'inherit'
+    if unit(val) is 'rem'
+      add-property('font-size', _remToPx(val))
 
   add-property('font-size', val)
 

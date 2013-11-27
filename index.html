@@ -13,52 +13,67 @@
 </head>
 <body>
 
-  <header class="masthead">
+  <header class="masthead mb-lh">
     <div class="embed ratio-16x6 masthead__img">
       <img class="embed__item" src="http://placehold.it/1600x600" alt="">
     </div>
-    <h1 class="blurb">Lorem ipsum dolor sit amet consequiter adim spaciton.</h1>
+    <h1 class="blurb"><span class="blurb__text">Vote for positive leadership and a rejuvenated Local 415!</span></h1>
   </header>
 
   <main>
 
+    <p class="lede">Elections for our union executive are <strong>Tuesday, December 3rd</strong> and this time you have a choice.</p>
+    <blockquote class="quote">
+      <p class="quote__text">College counsellors, librarians, part-time and full-time faculty are facing serious issues. We <em>need</em> a <em>new</em> collaborative approach based on open dialogue and inclusivity. Together, we can move forward! <strong>It’s time to renew OPSEU Local 415.</strong></p>
+    </blockquote>
+
     {% for person in site.data.people %}
-      <article class="grid bio">
-        <div class="unit unit-s-1-3 unit-m-1-4">
-          <div class="unit-spacer">
-            <img class="flex-img" src="http://placehold.it/320x320" alt="">
-          </div>
-        </div>
-        <header class="unit unit-s-2-3 unit-m-3-4">
-          <div class="unit-spacer">
-            <h2 class="bio__name">{{person.name}}</h2>
-            <strong class="bio__title">{{person.title}}</strong>
-            <button class="bio__btn js-btn-bio" data-id="person-{{forloop.index}}" data-title-expand="Expand" data-title-collapsed="Collapse">Expand</button>
-          </div>
-        </header>
-        <div class="unit unit-s-1 unit-m-1 bio__extra" id="person-{{forloop.index}}" data-state="collapsed">
-          <div class="grid">
-            <div class="unit unit-s-1 unit-m-1-2">
-              <div class="unit-spacer">
-                <p class="bio__desc">{{person.bio}}</p>
+      <div class="bio-wrap">
+        <article class="grid bio">
+          <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1-3 bio__header">
+            <div class="grid">
+              <div class="unit unit-xs-1-3 unit-s-1-4 unit-m-1-5 unit-l-1-3 bio__img">
+                <div class="unit-spacer">
+                  <img class="flex-img" src="http://placehold.it/320x320" alt="">
+                </div>
               </div>
-            </div>
-            <div class="unit unit-s-1 unit-m-1-2">
-              <div class="unit-spacer">
-                <h3>Positions at Algonquin College</h3>
-                <ul class="bio__positions">
-                  {% for position in person.positions %}
-                    <li>{{position}}</li>
-                  {% endfor %}
-                </ul>
-              </div>
+              <header class="unit unit-xs-2-3 unit-s-3-4 unit-m-4-5 unit-l-2-3">
+                <div class="unit-spacer">
+                  <h2 class="bio__name">{{person.name | replace:' ','&nbsp;'}}</h2>
+                  <strong class="bio__title">{{person.title}}</strong>
+                  <button class="bio__btn js-btn-bio" data-id="person-{{forloop.index}}" data-title-expand="Expand" data-title-collapse="Collapse">Expand</button>
+                </div>
+              </header>
             </div>
           </div>
-        </div>
-      </article>
+          <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-2-3 bio__extra" id="person-{{forloop.index}}" data-state="collapsed">
+            <div class="grid">
+              <div class="unit unit-xs-1 unit-s-1 unit-m-1-2">
+                <div class="unit-spacer bio__desc">
+                  <p class="">{{person.bio}}</p>
+                </div>
+              </div>
+              <div class="unit unit-xs-1 unit-s-1 unit-m-1-2">
+                <div class="unit-spacer bio__positions">
+                  <h3 class="bio__heading">Positions at Algonquin College</h3>
+                  <ul class="">
+                    {% for position in person.positions %}
+                      <li>{{position}}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     {% endfor %}
 
   </main>
+
+  <footer class="social">
+    <p class="twitter"><i class="icon i-32 i-twitter"></i> Follow with <a href="">#collaborating415</a></p>
+  </footer>
 
   <script src="/js/collaboratingl415.js"></script>
 </body>

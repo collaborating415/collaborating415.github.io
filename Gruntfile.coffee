@@ -30,10 +30,11 @@ module.exports = (grunt) ->
           paths: ['css']
           use: ['nib']
           import: ['nib']
-          # compress: true
+          compress: false
           urlfunc: 'embedurl'
         files:
           'css/collaboratingl415.css': [
+            'css/normalize.styl'
             'css/main.styl'
           ]
 
