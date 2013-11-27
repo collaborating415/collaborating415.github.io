@@ -1,14 +1,15 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="en-ca">
+<html lang="en-ca" class="no-js">
 <head>
   <meta charset="utf-8">
   <title>Lorem Ipsum</title>
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="/css/main.min.css" rel="stylesheet">
+  <link href="/css/collaboratingl415.css" rel="stylesheet">
+  <script src="/js/modernizr.js"></script>
 </head>
 <body>
 
@@ -19,18 +20,46 @@
     <h1 class="blurb">Lorem ipsum dolor sit amet consequiter adim spaciton.</h1>
   </header>
 
-  <main class="grid">
+  <main>
 
     {% for person in site.data.people %}
-      <div class="unit unit-s-1 unit-m-1-3 unit-l-1-5">
-        <div class="unit-spacer bio">
-          <h2 class="bio__name">{{person.name}}</h2>
-          <p class="bio__desc">{{person.bio}}</p>
+      <article class="grid bio">
+        <div class="unit unit-s-1-3 unit-m-1-4">
+          <div class="unit-spacer">
+            <img class="flex-img" src="http://placehold.it/320x320" alt="">
+          </div>
         </div>
-      </div>
+        <header class="unit unit-s-2-3 unit-m-3-4">
+          <div class="unit-spacer">
+            <h2 class="bio__name">{{person.name}}</h2>
+            <strong class="bio__title">{{person.title}}</strong>
+            <button class="bio__btn js-btn-bio" data-id="person-{{forloop.index}}" data-title-expand="Expand" data-title-collapsed="Collapse">Expand</button>
+          </div>
+        </header>
+        <div class="unit unit-s-1 unit-m-1 bio__extra" id="person-{{forloop.index}}" data-state="collapsed">
+          <div class="grid">
+            <div class="unit unit-s-1 unit-m-1-2">
+              <div class="unit-spacer">
+                <p class="bio__desc">{{person.bio}}</p>
+              </div>
+            </div>
+            <div class="unit unit-s-1 unit-m-1-2">
+              <div class="unit-spacer">
+                <h3>Positions at Algonquin College</h3>
+                <ul class="bio__positions">
+                  {% for position in person.positions %}
+                    <li>{{position}}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
     {% endfor %}
 
   </main>
 
+  <script src="/js/collaboratingl415.js"></script>
 </body>
 </html>

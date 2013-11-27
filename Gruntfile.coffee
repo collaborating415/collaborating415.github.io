@@ -30,11 +30,26 @@ module.exports = (grunt) ->
           paths: ['css']
           use: ['nib']
           import: ['nib']
-          compress: true
+          # compress: true
           urlfunc: 'embedurl'
         files:
-          'css/main.min.css': [
+          'css/collaboratingl415.css': [
             'css/main.styl'
+          ]
+
+    coffee:
+      compile:
+        files:
+          'js/collaboratingl415.coffee.js': [
+            'js/*.coffee'
+          ]
+
+    concat:
+      dev:
+        files:
+          'js/collaboratingl415.js': [
+            'js/$.min.js'
+            'js/collaboratingl415.coffee.js'
           ]
 
     parallel:
@@ -63,6 +78,11 @@ module.exports = (grunt) ->
           livereload: false
         files: ['css/*.styl']
         tasks: ['stylus']
+      coffee:
+        options:
+          livereload: false
+        files: ['js/*.coffee']
+        tasks: ['coffee', 'concat:dev']
       css:
         files: ['_site/css/*.css']
       js:
@@ -76,6 +96,7 @@ module.exports = (grunt) ->
     'svgmin'
     'imageoptim'
     'stylus'
+    'coffee'
   ]
 
   grunt.registerTask 'default', [

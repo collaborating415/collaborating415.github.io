@@ -144,9 +144,12 @@ a:focus{outline:2px solid #000}
 .blurb{margin:0;padding:1em;background-color:#ccc;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,0.5);}
 @media only screen and (min-width: 38em){.blurb{bottom:0;left:50%;margin-left:-10em;position:absolute;width:20em;background-color:transparent}
 }.bio{margin-top:1.4em}
-[data-state="collapsed"]{max-height:0;overflow:hidden}
 .bio__name{margin:0;font-size:1.125rem}
 .bio__title{font-style:italic;font-weight:normal}
 @media only screen and (min-width: 38em){.bio__desc{font-size:.875rem}
 }@media only screen and (min-width: 60em){.bio__desc{font-size:.75rem}
-}
+}.bio__btn{cursor:pointer}
+.bio__extra{max-height:100em;overflow:hidden;transition:max-height 350ms linear}
+.js .bio__extra[data-state="collapsed"]{max-height:0}
+.bio__btn{display:none}
+.js .bio__btn{display:block}

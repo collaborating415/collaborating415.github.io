@@ -106,7 +106,11 @@ a:focus
   text-align left
 
 .unit-spacer
-  padding 0 1em
+  padding 0 8px
+
+.flex-img
+  display block
+  width 100%
 
 .masthead
   position relative
@@ -132,6 +136,15 @@ a:focus
 .bio
   margin-top 1.4em
 
+.bio__name
+  margin 0
+
+  font-size 1.125rem
+
+.bio__title
+  font-style italic
+  font-weight normal
+
 .bio__desc
 
   @media mw38
@@ -139,3 +152,21 @@ a:focus
 
   @media mw60
     font-size 0.75rem
+
+.bio__btn
+  cursor pointer
+
+.bio__extra
+  max-height 100em
+  overflow hidden
+
+  transition max-height 350ms linear
+
+.js .bio__extra[data-state="collapsed"]
+  max-height 0
+
+.bio__btn
+  display none
+
+.js .bio__btn
+  display block

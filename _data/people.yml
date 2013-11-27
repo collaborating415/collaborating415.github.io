@@ -1,19 +1,56 @@
-- name: Lorem Ipsum 1
+- name: Shawn McBride
+  title: President
   bio: >
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Shawn McBride is a 24 year veteran faculty member of the College. He has a Bachelor of Science Honours in Computing Science and worked in the hi-tech industry before joining Algonquin in 1989. He is currently a professor-coordinator in the Information and Communications Technology Department in the School of Advanced Technology. He is also the Board of Governors academic representative.
+  positions:
+    - "Faculty, Program Coordinator"
+    - "Chair, College Academic Technologies Committee"
+    - "Chair, Mobile Learning Program Committee"
+    - "Member, Kaleidoscope Program Planning Committee"
+    - "Academic Chair"
+    - "Manager, Mobile Learning and Academic Technologies"
+    - "Union Steward and Local Executive Committee Member, Local 415"
 
-- name: Lorem Ipsum 2
+- name: Cath Kenney
+  title: 1st Vice-President
   bio: >
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Cath grew up in the labour movement and as a child was involved in campaigning for Tommy Douglas (the Father of universal healthcare) and Marion Dewar (nurse and Ottawa Mayor). The social action movement has always been a powerful and integral part of her belief system. Cath is an educator, mentor, collaborator and passionate protector of faculty rights. Leadership areas have included being selected as the first college Chair of the Council of Ontario University and Theatre Programs, President of Laidlaw Housing Co-operative, Chair of College Academic Council, Producer and Director.
+  positions:
+    - "Full-time Faculty member for years"
+    - "Leader, Focus on Learning"
+    - "Mentor, College Faculty"
 
-- name: Lorem Ipsum
+- name: Paul Ebbs
+  title: 2nd Vice-President
   bio: >
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Paul Ebbs is a lawyer who was called to the Bar in 1983.  He has extensive experience in business law including client representation in relation to general employment law, labour relations and transaction negotiation.   He is interested in legal aspects of education including administrative law pertaining to interaction of students, faculty and management.  He has been a full-time professor since 1999 teaching subject including Law of the Workplace and Industrial Relations.
+  positions:
+    - "Full time Professor in School of Business"
+    - "Member of the Algonquin School of Business Appeal Committee responsible for hearing student academic and discipline appeals."
+    - "Active commentator within the School of Business in relation to labour relations at the college providing many opinions for faculty on issues such as the legislative framework for college labour relations;  the technicalities of collective bargaining;  right to strike issues including strike votes, replacement workers and picket line rules;  grievances procedures and other procedures for faculty to enforce collective agreement rights.   "
 
-- name: Lorem Ipsum
+- name: Roger Davey
+  title: Chief Steward
   bio: >
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Roger has been a Professor in the College’s School of Transportation for almost 24 years. He earned his Interprovincial License in Auto Mechanics after completing a Modified Apprenticeship Program (MAP) here at Algonquin College in 1979 and working for 9000 hours in the automotive trade at a local repair facility. He started teaching night courses at Algonquin in the spring of 1988 and soon realized he had a passion to help others learn in a field he has loved for most of his life.
+  positions:
+    - "Faculty, Program Coordinator in both Continuing Education and Full time Automotive programs"
+    - "Leader,  Live Laugh Learn program "
+    - "Leader, Focus on Learning program for all of the colleges in the Eastern Region’s new professors. "
+    - "Mentor for college’s new faculty each year"
+    - "Participant on a variety of committees for the college such as both school and college Academic Councils, Canadian Association of Motive Power Educators, Local Apprenticeship committee and the College curriculum Advisory committee"
+    - "Completed St. Clair College’s On-Line In-School Teacher Training program, Leadership and Development and Advanced Leadership and Development training, Union Stewardship training and First Responder and CPR training. "
+    - "Received the Algonquin College Award in 2003 and the NISOD Excellence award in 2009"
 
-- name: Lorem Ipsum
+- name: Jen Monk
+  title: Secretary
   bio: >
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Jen is a proud Algonquin College Alumnus with an Advanced Diploma in Business Administration with a Major in Marketing.  Prior to joining the faculty team at Algonquin College in 2003, Jennifer was the Facility Director for a local Ottawa sports organization where she lead a team in various marketing programs, negotiated contracts, and developed policy. She’s managed a budget in excess of $1Million and has managed projects in excess of $30 000.  She’s taught a variety of courses within the Department of Marketing and Management Studies, including: Marketing I & II, Global Marketing, Business Planning and Intelligence, and Skills Transferable to Business.
+  positions:
+    - "Full-time Faculty member in School of Business"
+    - "2005 recipient of the  Diane Bloor’s Part-Time Faculty Award"
+    - "Live Laugh Learn Faculty Retreat Committee Member in 2009, 2010, and in 2011, she was elected by the faculty team to co-lead the committee."
+    - "Faculty Mentor to partial load and full time faculty"
+    - "AC Family Fun Day Planning Team Leader – this is a new initiative (2013) that offers the employee community an opportunity to participate in a series of College events throughout the year. The first event attracted over 500 registrants and despite the rain over 350 attended. "
+    - "Student Mentorship Program – is the co-lead in developing a mentorship program designed to help level one students transition into college life and offer level three students an opportunity to gain employability skills"
+    - "Participates annually in a variety of professional development opportunities"
