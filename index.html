@@ -75,7 +75,12 @@
               </div>
               <div class="unit unit-xs-1 unit-s-1 unit-m-1-2">
                 <div class="unit-spacer bio__positions">
-                  <h3 class="bio__heading">Positions at Algonquin College</h3>
+                  <h3 class="bio__heading">
+                    {% if person.positions_title %}
+                      {{person.positions_title}}
+                    {% else %}
+                      Positions at Algonquin College
+                    {% endif %}</h3>
                   <ul class="">
                     {% for position in person.positions %}
                       <li>{{position}}</li>
