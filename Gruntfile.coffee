@@ -33,7 +33,7 @@ module.exports = (grunt) ->
           compress: false
           urlfunc: 'embedurl'
         files:
-          'css/collaboratingl415.css': [
+          'css/collaborating415.css': [
             'css/normalize.styl'
             'css/main.styl'
           ]
@@ -41,16 +41,16 @@ module.exports = (grunt) ->
     coffee:
       compile:
         files:
-          'js/collaboratingl415.coffee.js': [
+          'js/collaborating415.coffee.js': [
             'js/*.coffee'
           ]
 
     concat:
       dev:
         files:
-          'js/collaboratingl415.js': [
+          'js/collaborating415.js': [
             'js/$.min.js'
-            'js/collaboratingl415.coffee.js'
+            'js/collaborating415.coffee.js'
           ]
 
     parallel:
