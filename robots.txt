@@ -1,0 +1,5 @@
+# robotstxt.org
+
+Sitemap: http://collaborating415.info/sitemap.xml
+
+User-Agent: *
