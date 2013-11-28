@@ -78,7 +78,7 @@
                 {% for person in site.data.people %}
                   <li class="unit unit-xs-1-2 unit-s-1-3 unit-m-1-3 unit-l-1-5">
                     <p class="ta-c">
-                      <strong class="db"><a href="#person-{{forloop.index}}">{{person.name | replace:' ','&nbsp;'}}</a></strong>
+                      <strong class="db"><a href="#{{person.image | replace:'.jpg',''}}">{{person.name | replace:' ','&nbsp;'}}</a></strong>
                       <span>{% if person.title_short %}{{person.title_short | replace:' ','&nbsp;'}}{% else %}{{person.title | replace:' ','&nbsp;'}}{% endif %}</span>
                     </p>
                   </li>
@@ -193,7 +193,7 @@
     <section id="people">
       {% for person in site.data.people %}
         <div class="bio-wrap">
-          <article class="grid bio" id="person-{{forloop.index}}" itemscope itemtype="http://schema.org/Person">
+          <article class="grid bio" id="{{person.image | replace:'.jpg',''}}" itemscope itemtype="http://schema.org/Person">
             <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1-3 bio__header">
               <div class="grid">
                 <div class="unit unit-xs-1-3 unit-s-1-4 unit-m-1-5 unit-l-1-3 bio__img">
