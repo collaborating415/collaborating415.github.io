@@ -64,7 +64,131 @@
     </blockquote>
 
     <section class="platform" id="platform">
+      <div class="unit-spacer">
+        <h2 class="platform__head">Collaboration <span class="bullet">•</span> Communication <span class="bullet">•</span> Consultation</h2>
+        <p class="platform__intro">This is our opportunity to give change a chance!</p>
+      </div>
 
+      <div id="platform-details" class="platform__details js-expandable-item" data-state="collapsed">
+        <div class="grid">
+          <div class="unit unit-xs-1 unit-s-1">
+            <div class="unit-spacer">
+              <p class="ta-c">On Tuesday December 3rd, <strong>vote</strong> for change:</p>
+              <ol class="list-group grid mb-lh mw-50 ol-no-num">
+                {% for person in site.data.people %}
+                  <li class="unit unit-xs-1-2 unit-s-1-3 unit-m-1-3 unit-l-1-5">
+                    <p class="ta-c">
+                      <strong class="db">{{person.name | replace:' ','&nbsp;'}}</strong>
+                      <span>{% if person.title_short %}{{person.title_short | replace:' ','&nbsp;'}}{% else %}{{person.title | replace:' ','&nbsp;'}}{% endif %}</span>
+                    </p>
+                  </li>
+                {% endfor %}
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid mw-50">
+          <div class="unit unit-xs-1 unit-s-1-4 unit-m-1-4">
+            <div class="unit-spacer">
+              <h3 class="platform__heading">Who?</h3>
+            </div>
+          </div>
+          <div class="unit unit-xs-1 unit-s-3-4 unit-m-3-4 fs-0875">
+            <div class="unit-spacer">
+              <p>The five members who have put their name forward are supported by a large group of like-minded members. Shawn, Cath, Paul, Roger, and Jen are all long-time faculty who possess the required skills to meet the needs of the membership and to successfully negotiate on your behalf.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid mw-50">
+          <div class="unit unit-xs-1 unit-s-1-4 unit-m-1-4">
+            <div class="unit-spacer">
+              <h3 class="platform__heading">What?</h3>
+            </div>
+          </div>
+          <div class="unit unit-xs-1 unit-s-3-4 unit-m-3-4 fs-0875">
+            <div class="unit-spacer">
+              <p><em>We are campaigning in efforts to:</em></p>
+              <ol>
+                <li>Strongly represent the membership based on your expressed needs and concerns</li>
+                <li>Improve communications between the local and the membership</li>
+                <li>Renew OPSEU Local 415 with an active membership committed to the cause (solving issues)</li>
+                <li>Bring a mandate that aims to resolve members’ concerns at stage one</li>
+                <li>Bring an annual review process  that ensures the accountability of the local executive to its membership</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid mw-50">
+          <div class="unit unit-xs-1 unit-s-1-4 unit-m-1-4">
+            <div class="unit-spacer">
+              <h3 class="platform__heading">Why?</h3>
+            </div>
+          </div>
+          <div class="unit unit-xs-1 unit-s-3-4 unit-m-3-4 fs-0875">
+            <div class="unit-spacer">
+              <p><em>The current approach is no longer an effective resolution model.</em></p>
+              <ul class="ul-checks">
+                <li>Meetings hosted by management receive greater faculty attendance than meetings held by the local</li>
+                <li>Faculty want a better resolution process</li>
+                <li>Faculty want to be informed if a grievance goes in on their behalf</li>
+                <li>The demands for counselling services has increased and its team has not grown proportionally</li>
+                <li>Management is making one-size fits all decisions that impact faculty without consultation with the local (examples: e-text,  mobile learning, and AODA)</li>
+                <li>The Woodroffe working area is not subdivided into separate zones which created an imbalance in representation. Through our recruitment efforts we aim to increase the number of stewards so that the entire membership has representation at LEC ?</li>
+              </ul>
+              <p>The opportunity exists <strong>now</strong> to change this situation to a more collaborative, consultative approach within our membership, the support staff local and with management.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid mw-50">
+          <div class="unit unit-xs-1 unit-s-1-4 unit-m-1-4">
+            <div class="unit-spacer">
+              <h3 class="platform__heading">How?</h3>
+            </div>
+          </div>
+          <div class="unit unit-xs-1 unit-s-3-4 unit-m-3-4 fs-0875">
+            <div class="unit-spacer">
+              <p><em>By getting your voice heard! – We were nominated with the support of several stewards because of our experience and our ability to represent the membership as a whole. We know it is possible to move forward by:</em></p>
+              <ul>
+                <li>Re-instating the Union College Committee as per Article 7 of the Collective Bargaining Act. (Currently we are the only Ontario College without this committee)</li>
+                <li>Collecting members’ opinions and concerns as per Article 6 of our local Bylaws.</li>
+                <li>Being proactive on issues and by negotiating solutions developed in consultation with the membership.</li>
+                <li>Implementing a decision making process that supports members designed on the principles of collaboration, transparency, and open dialogue</li>
+                <li>Being strong advocates and committed protectors for <strong>each member</strong> by following the negotiated Collective Agreement and by participating in the upcoming negotiations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid mw-50">
+          <div class="unit unit-xs-1 unit-s-1-4 unit-m-1-4">
+            <div class="unit-spacer">
+              <h3 class="platform__heading">When &amp; Where?</h3>
+            </div>
+          </div>
+          <div class="unit unit-xs-1 unit-s-3-4 unit-m-3-4 fs-0875">
+            <div class="unit-spacer">
+              <p><em>The vote takes place on <strong>Tuesday, December 3</strong></em></p>
+              <dl>
+                <dt>Pembroke:</dt>
+                <dd>9:00 a.m. – 3:00 p.m. room 308</dd>
+                <dt>Perth:</dt>
+                <dd>11:00 a.m. – 1:00 p.m. room 107</dd>
+                <dt>Woodroffe:</dt>
+                <dd>8:30 a.m. – 4:00 p.m. room C215b (Union Office)</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="more-btn-wrap">
+        <button class="more-btn js-expandable" data-id="platform-details" data-title-expand="More" data-title-collapse="Less">More</button>
+      </div>
     </section>
 
     <section id="people">
@@ -87,7 +211,7 @@
                 </header>
               </div>
             </div>
-            <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-2-3 bio__extra" id="person-{{forloop.index}}" data-state="collapsed">
+            <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-2-3 bio__extra js-expandable-item" id="person-{{forloop.index}}" data-state="collapsed">
               <div class="grid">
                 <div class="unit unit-xs-1 unit-s-1 unit-m-1-2">
                   <div class="unit-spacer bio__desc">
@@ -120,6 +244,18 @@
 
   <aside class="social" id="conversations" role="complementary">
     <p class="twitter"><i class="icon i-32 i-twitter"></i> Follow the conversation with <a href="https://twitter.com/search?q=%23collaborating415&amp;src=typd&amp;f=realtime" rel="external">#collaborating415</a></p>
+
+    <div class="vote">
+      <h2><em>Vote <strong>Tuesday, December 3</strong></em></h2>
+      <dl class="unit-spacer mb-0 ta-l mw-25">
+        <dt>Pembroke:</dt>
+        <dd>9:00 a.m. – 3:00 p.m. room 308</dd>
+        <dt>Perth:</dt>
+        <dd>11:00 a.m. – 1:00 p.m. room 107</dd>
+        <dt>Woodroffe:</dt>
+        <dd>8:30 a.m. – 4:00 p.m. room C215b (Union Office)</dd>
+      </dl>
+    </div>
   </aside>
 
   <script src="/js/collaborating415.js" async></script>

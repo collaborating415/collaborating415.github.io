@@ -37,6 +37,8 @@ html
   margin 0
   position relative
 
+  background-color #fff
+
   font normal base-font-size/base-line-height Roboto,sans-serif
 
   @media mw38
@@ -58,8 +60,7 @@ body
   padding 0
   position relative
 
-  border-bottom 8px solid #000
-  // border-top 8px solid #000
+  background-color #fff
 
   color #333
 
@@ -113,8 +114,63 @@ ul
     position absolute
     width 0.5em
 
-    color #999
+    color primary
     text-align right
+
+ol
+.ul-checks
+  margin 0 0 unit(base-line-height, em)
+  padding 0 0 0 1.5em
+
+  list-style-type none
+
+  @media mw25
+    padding 0
+
+ol
+  counter-reset ol
+
+  > li
+    position relative
+
+  > li:before
+    left -1.4em
+    position absolute
+    width 1.1em
+
+    content counter(ol) "."
+    counter-increment ol
+
+    color primary
+    text-align right
+
+.ol-no-num > li:before
+  content ""
+  display none
+
+.ul-checks
+  > li:before
+    left -1.4em
+    width 1.1em
+
+    content "✔"
+
+    color primary
+
+dl
+  margin 0 0 unit(base-line-height, em)
+  overflow hidden
+  padding 0
+
+dt
+  clear left
+  float left
+  width 6em
+
+  font-weight bold
+
+dd
+  overflow hidden
 
 a
 a:link
@@ -139,6 +195,42 @@ button:focus
 .mb-0
   margin-bottom 0
 
+.db
+  display block
+
+.ta-c
+  text-align center
+
+.ta-l
+  text-align left
+
+.ta-r
+  text-align right
+
+.mw-25
+.mw-35
+.mw-45
+.mw-50
+  margin-left auto
+  margin-right auto
+  max-width 35em
+
+.mw-25
+  max-width 25em
+
+.mw-45
+  max-width 45em
+
+.mw-50
+  max-width 50em
+
+.fs-0875
+  font-size 0.875rem
+
+.inline-w-5
+  display inline-block
+  width 5em
+
 .grid
   text-align center
 
@@ -157,14 +249,16 @@ button:focus
   width 100%
 
 .nav
-  padding unit(base-line-height, em) 0
+  padding 1em 0 1.5em
 
   background-color #000
 
   color #fff
-  font-size 1.125rem
   font-weight bold
   text-align center
+
+  @media mw38
+    font-size 1.125rem
 
   ul
     margin 0
@@ -178,11 +272,36 @@ button:focus
   a:link
   a:visited
     display inline-block
-    padding 0 0.5em
-
+    position relative
+    padding 0 0.75em
     border 0
 
     color #fff
+
+    @media mw38
+      padding 0 1.5em
+
+  a:after
+    bottom -0.7em
+    content "▾"
+    left 0
+    position absolute
+    right 0
+
+    color #fff
+    line-height 1
+    text-align center
+
+.js-expandable-item
+  overflow hidden
+
+  transition max-height 250ms linear
+
+.js .js-expandable-item[data-state="collapsed"]
+  max-height 0
+
+  @media mw38
+    max-height 120em
 
 .masthead
   position relative
@@ -273,6 +392,50 @@ button:focus
 
   text-align left
 
+.platform
+  padding unit(base-line-height, em) 0
+
+  border-bottom 8px solid #000
+
+.platform__head
+  text-align center
+
+.platform__intro
+  text-align center
+
+.platform__details
+  // font-size 0.875rem
+
+.platform__heading
+  margin-top -0.15em
+
+.more-btn-wrap
+  text-align center
+
+  @media mw38
+    display none
+
+.more-btn
+  padding 0.5em 1em
+
+  background-color #ccc
+  border 2px solid #bbb
+  border-radius 6px
+  cursor pointer
+
+  color #000
+  font-size 1.125rem
+  font-weight bold
+  text-transform uppercase
+
+// .more-btn:hover
+// .more-btn:focus
+// .more-btn:active
+//   background-color primary
+//   border-color darken(primary, 25%)
+
+//   color #fff
+
 .bio-wrap
   background-color #e2e2e2
   border-bottom 2px solid #bbb
@@ -331,8 +494,6 @@ button:focus
   max-height 100em
   overflow hidden
 
-  transition max-height 250ms linear
-
   font-size 0.875rem
 
   @media mw38
@@ -340,12 +501,6 @@ button:focus
 
   @media mw60
     font-size 0.75rem
-
-.js .bio__extra[data-state="collapsed"]
-  max-height 0
-
-  @media mw38
-    max-height 100em
 
 .bio__btn
   bottom 0
@@ -375,7 +530,7 @@ button:focus
     display none
 
 .social
-  padding unit(base-line-height, em) 0
+  padding unit(base-line-height, em) 0 0
 
   background-color primary
   border-top 8px solid #000
@@ -395,8 +550,15 @@ button:focus
   a:active
     border-color rgba(#fff, 1)
 
-.twitter
-  margin 0
+.vote
+  padding unit(base-line-height, em) 0
+
+  background-color #000
+
+  color #fff
+
+.vote h2
+  color #fff
 
 @import 'icons'
 @import 'embed-containers'
