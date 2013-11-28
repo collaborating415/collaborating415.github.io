@@ -17,7 +17,7 @@ module.exports = (grunt) ->
     imageoptim:
       options:
         imageAlpha: true
-        # jpegMini: true
+        jpegMini: true
         quitAfter: true
       compress:
         src: [
