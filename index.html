@@ -16,6 +16,17 @@
   <meta name="application-name" content="Collaborating Local 415">
   <meta name="msapplication-TileImage" content="/msapplication-icon.png">
   <meta name="msapplication-TileColor" content="#4890cd">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Collaborating 415">
+  <meta property="og:url" content="http://collaborating415.info/">
+  <meta property="og:image" content="http://collaborating415.info/apple-touch-icon.png">
+  <meta property="og:site_name" content="Collaborating 415">
+  <meta property="og:description" content="Algonquin College counsellors, librarians, and faculty need a new collaborative approach based on open dialogue and inclusivity.">
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:title" content="Collaborating 415">
+  <meta property="twitter:url" content="http://collaborating415.info/">
+  <meta property="twitter:image" content="http://collaborating415.info/apple-touch-icon.png">
+  <meta property="twitter:description" content="Algonquin College counsellors, librarians, and faculty need a new collaborative approach based on open dialogue and inclusivity.">
 </head>
 <body>
 
@@ -28,7 +39,9 @@
 
   <main>
 
-    <div class="lede">
+    <div class="lede" itemscope itemtype="http://schema.org/Event">
+      <meta itemprop="name" content="Union Executive Vote">
+      <meta itemprop="startDate" content="2013-12-03">
       <p class="lede__text">Elections for our union executive are <strong>Tuesday, December 3rd</strong> and this time you have a choice.</p>
     </div>
     <blockquote class="quote">
@@ -37,7 +50,7 @@
 
     {% for person in site.data.people %}
       <div class="bio-wrap">
-        <article class="grid bio">
+        <article class="grid bio" itemscope itemtype="http://schema.org/Person">
           <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1-3 bio__header">
             <div class="grid">
               <div class="unit unit-xs-1-3 unit-s-1-4 unit-m-1-5 unit-l-1-3 bio__img">
@@ -47,8 +60,8 @@
               </div>
               <header class="unit unit-xs-2-3 unit-s-3-4 unit-m-4-5 unit-l-2-3">
                 <div class="unit-spacer">
-                  <h2 class="bio__name">{{person.name | replace:' ','&nbsp;'}}</h2>
-                  <strong class="bio__title">{{person.title}}</strong>
+                  <h2 class="bio__name" itemprop="name">{{person.name | replace:' ','&nbsp;'}}</h2>
+                  <strong class="bio__title" itemprop="jobTitle">{{person.title}}</strong>
                   <button class="bio__btn js-btn-bio" data-id="person-{{forloop.index}}" data-title-expand="Expand" data-title-collapse="Collapse">Expand</button>
                 </div>
               </header>
