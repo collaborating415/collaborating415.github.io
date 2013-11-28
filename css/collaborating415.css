@@ -676,6 +676,11 @@ a,
 a:link,
 a:visited {
   border-bottom: 0.1em solid rgba(72,144,205,0.3);
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  -ms-transition: all 100ms linear;
+  transition: all 100ms linear;
   color: #4890cd;
   text-decoration: none;
 }
@@ -801,6 +806,11 @@ button:focus {
   position: absolute;
   right: 0;
   opacity: 0.5;
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  -ms-transition: all 100ms linear;
+  transition: all 100ms linear;
   color: #fff;
   line-height: 1;
   text-align: center;
