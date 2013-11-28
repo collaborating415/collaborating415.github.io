@@ -1,8 +1,6 @@
 {
-  "name": "",
+  "name": "collaborating415.info",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
   "author": {
     "name": "Thomas J Bradley",
     "email": "hey@thomasjbradley.ca",
@@ -21,8 +19,4 @@
     "grunt-contrib-coffee": "~0.7.0",
     "grunt-contrib-concat": "~0.3.0"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  }
 }
