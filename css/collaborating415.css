@@ -791,15 +791,24 @@ button:focus {
     padding: 0 1.5em;
   }
 }
+.nav a:focus {
+  outline-color: #fff;
+}
 .nav a:after {
   bottom: -0.7em;
   content: "▾";
   left: 0;
   position: absolute;
   right: 0;
+  opacity: 0.5;
   color: #fff;
   line-height: 1;
   text-align: center;
+}
+.nav a:hover:after,
+.nav a:focus:after,
+.nav a:active:after {
+  opacity: 1;
 }
 .js-expandable-item {
   overflow: hidden;
