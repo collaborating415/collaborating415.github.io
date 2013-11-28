@@ -227,6 +227,9 @@ button:focus
 .fs-0875
   font-size 0.875rem
 
+.fs-075
+  font-size 0.75rem
+
 .inline-w-5
   display inline-block
   width 5em
@@ -452,16 +455,35 @@ button:focus
     padding-top 1em
 
 .bio__name
-  margin 9% 0 0
+  margin 7% 0 0
   padding 0
 
   font-size 1.125rem
+  line-height 1.2
 
   @media mw25
-    margin-top 7%
+    margin-top 5%
+
+  @media mw38
+    margin-top 3%
+
+  @media mw60
+    margin-top 0
+
+.bio__email
+  overflow hidden
+  width 12em
+
+  color #666
+  text-overflow ellipsis
 
   @media mw25
-    margin-top 4%
+    width auto
+
+.bio__title
+  font-style italic
+  font-weight normal
+  line-height 1.3
 
 .bio__desc
   padding-top unit(base-line-height, em)
@@ -482,10 +504,6 @@ button:focus
   margin 0
 
   font-size inherit
-
-.bio__title
-  font-style italic
-  font-weight normal
 
 .bio__header
   position relative
