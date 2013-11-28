@@ -1,6 +1,6 @@
 "use strict"
 
-$('.js-btn-bio').on 'click', () ->
+$('.js-expandable').on 'click', () ->
   id = @.getAttribute('data-id')
   box = $('#' + id)
   btnTextExpand = @.getAttribute('data-title-expand')

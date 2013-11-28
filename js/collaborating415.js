@@ -3,7 +3,7 @@ $=function(t,n,e){var i=Node.prototype,r=NodeList.prototype,o="forEach",u="trigg
 
 (function() {
   "use strict";
-  $('.js-btn-bio').on('click', function() {
+  $('.js-expandable').on('click', function() {
     var box, btnTextCollapse, btnTextExpand, id;
     id = this.getAttribute('data-id');
     box = $('#' + id);

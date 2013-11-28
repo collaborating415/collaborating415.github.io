@@ -1,6 +1,5 @@
 @import 'rem-polyfill'
 @import 'grid-builder'
-@import 'embed-containers'
 
 // Common media queries
 mw19 = "only screen and (min-width: 19em)"
@@ -60,7 +59,7 @@ body
   position relative
 
   border-bottom 8px solid #000
-  border-top 8px solid #000
+  // border-top 8px solid #000
 
   color #333
 
@@ -157,6 +156,34 @@ button:focus
   display block
   width 100%
 
+.nav
+  padding unit(base-line-height, em) 0
+
+  background-color #000
+
+  color #fff
+  font-size 1.125rem
+  font-weight bold
+  text-align center
+
+  ul
+    margin 0
+    padding 0
+
+  li:before
+    content ""
+    display none
+
+  a
+  a:link
+  a:visited
+    display inline-block
+    padding 0 0.5em
+
+    border 0
+
+    color #fff
+
 .masthead
   position relative
 
@@ -208,7 +235,7 @@ button:focus
 
 .quote
   margin 0
-  padding 1.7em 4em 2em
+  padding 1.7em 3em 2em
 
   background-color primary
   border-bottom 8px solid #000
@@ -372,3 +399,5 @@ button:focus
   margin 0
 
 @import 'icons'
+@import 'embed-containers'
+@import 'list-group'

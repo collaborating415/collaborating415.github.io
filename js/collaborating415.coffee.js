@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  $('.js-btn-bio').on('click', function() {
+  $('.js-expandable').on('click', function() {
     var box, btnTextCollapse, btnTextExpand, id;
     id = this.getAttribute('data-id');
     box = $('#' + id);
