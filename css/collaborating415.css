@@ -1054,12 +1054,8 @@ button:focus {
 .bio__extra {
   max-height: 100em;
   overflow: hidden;
+  position: relative;
   background-color: #ccc;
-  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0, #ccc 1%, #ccc 99%, rgba(0,0,0,0.2));
-  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0, #ccc 1%, #ccc 99%, rgba(0,0,0,0.2));
-  background-image: -o-linear-gradient(top, rgba(0,0,0,0.3) 0, #ccc 1%, #ccc 99%, rgba(0,0,0,0.2));
-  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.3) 0, #ccc 1%, #ccc 99%, rgba(0,0,0,0.2));
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0, #ccc 1%, #ccc 99%, rgba(0,0,0,0.2));
   border-bottom: 2px solid #bbb;
   font-size: 14px;
   font-size: 0.875rem;
@@ -1067,7 +1063,6 @@ button:focus {
 @media only screen and (min-width: 38em) {
   .bio__extra {
     background-color: transparent;
-    background-image: none;
     font-size: 14px;
     font-size: 0.875rem;
   }
@@ -1078,6 +1073,35 @@ button:focus {
     font-size: 12px;
     font-size: 0.75rem;
   }
+}
+.bio__extra:after,
+.bio__extra:before {
+  content: " ";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3), #ccc);
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.3), #ccc);
+  background-image: -o-linear-gradient(top, rgba(0,0,0,0.3), #ccc);
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.3), #ccc);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), #ccc);
+}
+@media only screen and (min-width: 38em) {
+  .bio__extra:after,
+  .bio__extra:before {
+    display: none;
+  }
+}
+.bio__extra:after {
+  bottom: 0;
+  top: auto;
+  background-image: -webkit-linear-gradient(top, #ccc, rgba(0,0,0,0.3));
+  background-image: -moz-linear-gradient(top, #ccc, rgba(0,0,0,0.3));
+  background-image: -o-linear-gradient(top, #ccc, rgba(0,0,0,0.3));
+  background-image: -ms-linear-gradient(top, #ccc, rgba(0,0,0,0.3));
+  background-image: linear-gradient(to bottom, #ccc, rgba(0,0,0,0.3));
 }
 .bio-wrap:last-child .bio__extra,
 .bio__extra[data-state="expanded"] {
