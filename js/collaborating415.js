@@ -3,7 +3,11 @@ $=function(t,n,e){var i=Node.prototype,r=NodeList.prototype,o="forEach",u="trigg
 
 (function() {
   "use strict";
-  $('.js-expandable').on('click', function() {
+  var correctEvent;
+
+  correctEvent = Modernizr.touch ? 'touchstart' : 'click';
+
+  $('.js-expandable').on(correctEvent, function() {
     var box, btnTextCollapse, btnTextExpand, id;
     id = this.getAttribute('data-id');
     box = $('#' + id);

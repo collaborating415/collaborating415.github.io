@@ -1,6 +1,8 @@
 "use strict"
 
-$('.js-expandable').on 'click', () ->
+correctEvent = if Modernizr.touch then 'touchstart' else 'click'
+
+$('.js-expandable').on correctEvent, () ->
   id = @.getAttribute('data-id')
   box = $('#' + id)
   btnTextExpand = @.getAttribute('data-title-expand')
