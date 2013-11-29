@@ -457,10 +457,12 @@ button:focus
 
 .bio-wrap
   background-color #e2e2e2
-  border-bottom 2px solid #bbb
+
+  @media mw60
+    border-bottom 2px solid #bbb
 
 .bio-wrap:last-child
-  border-bottom 0
+  border 0
 
 .bio
   margin 0 auto
@@ -528,13 +530,26 @@ button:focus
   max-height 100em
   overflow hidden
 
+  background-color #ccc
+  background-image linear-gradient(to bottom, rgba(#000, 0.3) 0, #ccc 1%, #ccc 99%, rgba(#000, 0.2))
+  border-bottom 2px solid #bbb
+
   font-size 0.875rem
 
   @media mw38
+    background-color transparent
+    background-image none
+
     font-size 0.875rem
 
   @media mw60
+    border 0
+
     font-size 0.75rem
+
+.bio-wrap:last-child .bio__extra
+.bio__extra[data-state="expanded"]
+  border-bottom 0
 
 .bio__btn
   bottom 0
