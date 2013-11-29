@@ -103,16 +103,19 @@ blockquote
 
 ul
   margin 0 0 unit(base-line-height, em)
-  padding 0
+  padding 0 0 0 1.5em
 
   list-style-type none
+
+  @media mw25
+    padding-left 0
 
   > li
     position relative
 
   > li:before
     content "•"
-    left -0.6em
+    left -0.7em
     position absolute
     width 0.5em
 
@@ -127,7 +130,7 @@ ol
   list-style-type none
 
   @media mw25
-    padding 0
+    padding-left 0
 
 ol
   counter-reset ol
@@ -504,13 +507,13 @@ button:focus
   line-height 1.3
 
 .bio__desc
-  padding-top unit(base-line-height, em)
+  padding unit(base-line-height, em) 1em 0
 
   @media mw60
     padding-top 0
 
 .bio__positions
-  padding-top 0
+  padding 0 1em
 
   @media mw38
     padding-top unit(base-line-height, em)

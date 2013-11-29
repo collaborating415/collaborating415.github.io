@@ -607,15 +607,20 @@ blockquote {
 }
 ul {
   margin: 0 0 1.4em;
-  padding: 0;
+  padding: 0 0 0 1.5em;
   list-style-type: none;
+}
+@media only screen and (min-width: 25em) {
+  ul {
+    padding-left: 0;
+  }
 }
 ul > li {
   position: relative;
 }
 ul > li:before {
   content: "•";
-  left: -0.6em;
+  left: -0.7em;
   position: absolute;
   width: 0.5em;
   color: #4890cd;
@@ -630,7 +635,7 @@ ol,
 @media only screen and (min-width: 25em) {
   ol,
   .ul-checks {
-    padding: 0;
+    padding-left: 0;
   }
 }
 ol {
@@ -1019,7 +1024,7 @@ button:focus {
   line-height: 1.3;
 }
 .bio__desc {
-  padding-top: 1.4em;
+  padding: 1.4em 1em 0;
 }
 @media only screen and (min-width: 60em) {
   .bio__desc {
@@ -1027,7 +1032,7 @@ button:focus {
   }
 }
 .bio__positions {
-  padding-top: 0;
+  padding: 0 1em;
 }
 @media only screen and (min-width: 38em) {
   .bio__positions {
